@@ -1,5 +1,6 @@
 FROM langchain/langchain
 
+USER root
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
