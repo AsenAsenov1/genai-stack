@@ -1,7 +1,8 @@
 FROM langchain/langchain
 
-USER root
+CMD mkdir embedding_model
 WORKDIR /app
+CMD mkdir embedding_model
 
 RUN apt-get update && apt-get install -y \
     build-essential \
