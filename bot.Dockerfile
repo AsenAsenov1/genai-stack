@@ -1,8 +1,7 @@
 FROM langchain/langchain
 
-CMD mkdir embedding_model
+RUN mkdir embedding_model
 WORKDIR /app
-CMD mkdir embedding_model
 
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -13,6 +12,7 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 
 RUN pip install --upgrade -r requirements.txt
+
 
 COPY bot.py .
 COPY utils.py .
